@@ -23,10 +23,10 @@ This tutorial outlines the implementation of Active Directory within Azure Virtu
 - Configuring a domain on the domain controller VM
 - Creating a domain admin
 - Join the Client VM to the domain
-- Create a normal cluent user 
+- Create a normal client user 
 
 
-<h2>Deployment and Configuration Steps</h2>
+<h2>Configuring Domain</h2>
 
 ![image](https://github.com/user-attachments/assets/d2956577-6682-466e-90ae-3db84d73d98c)
 
@@ -50,6 +50,8 @@ After the restart, get back into the server with remote desktop. Doing this will
 </p>
 <br />
 
+<h2>Creating A Domain Admin</h2>
+
 ![image](https://github.com/user-attachments/assets/bc252d6d-dcbb-4ffc-b063-2dab32e72f51)
 
 <p>
@@ -70,6 +72,8 @@ Now, we are going to create the admin user. From within the ADMIN OU, right clic
 Next, to make this user an admin, we need to add them to a security group. To do so, right click the user > Member Of > Add. Type "domain admins" in the box and click Chekc Names > Ok > Apply > Ok.
 </p>
 <br />
+
+<h2>Adding Client to the Domain</h2>
 
 ![image](https://github.com/user-attachments/assets/51472794-8aec-4fe8-a39f-97ddece15661)
 
@@ -95,6 +99,8 @@ To confirm that the client server is on the domain, we can open the Active Direc
 Next, login to the client server using the admin user credentials. We are able to do this because the client server was added to the domain. We want to configure the CLient VM so that any domain user can use their credentials to access the VM. Right click start > System > remote desktop > Select users that can remotely access this PC > Add > Type "domain users" in the box and click Check Names > Ok > Ok. 
 </p>
 <br />
+
+<h2>Creaating A Non-Admin Employee</h2>
 
 <p>
 From within the domain controller, let's now create an employee in the Active Directory Users and Computers window that won't be admins. Click on the _EMPLOYEES OU > Right click > New > User. Use whatever credentials you want. Now try to login to the client VM using the credentials of the employee you just made. 
