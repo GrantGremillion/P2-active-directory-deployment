@@ -100,7 +100,7 @@ Next, login to the client server using the admin user credentials. We are able t
 </p>
 <br />
 
-<h2>Creaating A Non-Admin Employee</h2>
+<h2>Creating A Non-Admin Employee</h2>
 
 <p>
 From within the domain controller, let's now create an employee in the Active Directory Users and Computers window that won't be admins. Click on the _EMPLOYEES OU > Right click > New > User. Use whatever credentials you want. Now try to login to the client VM using the credentials of the employee you just made. 
